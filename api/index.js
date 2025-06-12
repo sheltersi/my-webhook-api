@@ -3,6 +3,10 @@ const app = express();
 
 app.use(express.json());
 
+app.get('/', (req, res) => {
+  res.send('Webhook Sort API is running. Use POST /api/index with JSON payload.');
+})
+
 app.post('/', (req, res) => {
   const { data } = req.body;
 
